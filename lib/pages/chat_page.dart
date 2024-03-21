@@ -162,7 +162,7 @@ class _MessageBarState extends State<_MessageBar> {
                   autofocus: true,
                   controller: _textController,
                   decoration: const InputDecoration(
-                    hintText: 'Type a message',
+                    hintText: 'Scrie ceva',
                     border: InputBorder.none,
                     focusedBorder: InputBorder.none,
                     contentPadding: EdgeInsets.all(8),
@@ -171,7 +171,7 @@ class _MessageBarState extends State<_MessageBar> {
               ),
               TextButton(
                 onPressed: () => _submitMessage(),
-                child: const Text('Send'),
+                child: const Text('Trimite'),
               ),
             ],
           ),

@@ -56,6 +56,10 @@ class _LoginPageState extends State<LoginPage> {
       body: ListView(
         padding: formPadding,
         children: [
+          const Center(child: const Text("Echipa Cofelutza",style: TextStyle(fontSize: 25),)),
+          const SizedBox(
+            height: 10,
+          ),
           TextFormField(
             controller: _emailController,
             decoration: const InputDecoration(labelText: 'Email'),

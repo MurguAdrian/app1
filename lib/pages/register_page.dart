@@ -52,13 +52,14 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Register'),
+        title: Center(child: const Text('Inregistrati-va')),
       ),
       body: Form(
         key: _formKey,
         child: ListView(
           padding: formPadding,
           children: [
+            Center(child: Text("Mail-ul poate fi oricare,")),
             TextFormField(
               controller: _emailController,
               decoration: const InputDecoration(
@@ -84,7 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   return 'Required';
                 }
                 if (val.length < 6) {
-                  return '6 characters minimum';
+                  return '6 charactereee macar';
                 }
                 return null;
               },
@@ -93,7 +94,7 @@ class _RegisterPageState extends State<RegisterPage> {
             TextFormField(
               controller: _usernameController,
               decoration: const InputDecoration(
-                label: Text('Username'),
+                label: Text('Nume'),
               ),
               validator: (val) {
                 if (val == null || val.isEmpty) {
@@ -101,7 +102,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 }
                 final isValid = RegExp(r'^[A-Za-z0-9_]{3,24}$').hasMatch(val);
                 if (!isValid) {
-                  return '3-24 long with alphanumeric or underscore';
+                  return '3-24 lungime si litera mare';
                 }
                 return null;
               },
@@ -116,7 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
               onPressed: () {
                 Navigator.of(context).push(LoginPage.route());
               },
-              child: const Text('I already have an account'),
+              child: const Text('Ai deja cont'),
             )
           ],
         ),
